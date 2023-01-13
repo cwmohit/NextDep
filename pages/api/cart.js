@@ -35,6 +35,8 @@ const addProduct = Authenticated(async(req,res)=>{
 
      const cart =  await Cart.findOne({user: req.userId})
      const pExists =  cart.products.some(pdoc => productId === pdoc.product.toString() )
+
+     console.log(cart, "cart", pExists, "pE")
    
      if(pExists){
         await Cart.findOneAndUpdate(

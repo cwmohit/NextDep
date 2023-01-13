@@ -20,6 +20,14 @@ const orderSchema  = new mongoose.Schema({
     total:{
         type:Number,
         required:true
+    },
+    status: {
+        type: String,
+        required: true
+    },
+    shippingAddress: {
+        type: String,
+        required: true
     }
 },{
     timestamps:true

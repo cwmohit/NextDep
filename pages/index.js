@@ -9,9 +9,9 @@ const Home = ({products})=>{
     <div className="card pcard" key={product._id}>
     <div className="card-image">
       <img src={product.mediaUrl} />
-      <span className="card-title">{product.name}</span>
     </div>
     <div className="card-content">
+      <p>{product.name}</p>
       <p> ₹  {product.price}</p>
     </div>
     <div className="card-action">

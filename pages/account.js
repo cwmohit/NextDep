@@ -10,6 +10,8 @@ const Account = ({orders})=>{
     useEffect(()=>{
         M.Collapsible.init(orderCard.current)
     },[])
+
+    console.log(orders)
   const OrderHistory = ()=>{
         return(
             <ul className="collapsible" ref={orderCard}>
@@ -17,7 +19,7 @@ const Account = ({orders})=>{
                 {orders.map(item=>{
                     return(
                      <li key={item._id}>
-                        <div className="collapsible-header"><i className="material-icons">folder</i>{item.createdAt}</div>
+                        <div className="collapsible-header"><i className="material-icons">folder</i>{item.createdAt} - {item.status}</div>
                         <div className="collapsible-body">
                             <h5>Total  ₹ {item.total}</h5>
                             {
